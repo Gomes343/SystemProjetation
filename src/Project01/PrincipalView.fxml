@@ -1,32 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import javafx.geometry.Point3D?>
-<?import javafx.geometry.Rectangle2D?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="275.0" prefWidth="440.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project01.PrincipalController">
-    <children>
-        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <JFXButton alignment="CENTER" buttonType="RAISED" cache="true" cacheHint="QUALITY" layoutX="323.0" layoutY="221.0" prefHeight="43.0" prefWidth="89.0" style="-jfx-button-type: RAISED; -jfx-disable-visual-focus: FALSE;" />
-      <Pane accessibleRole="IMAGE_VIEW" prefHeight="292.0" prefWidth="104.0">
-         <children>
-            <ImageView pickOnBounds="true" preserveRatio="true" smooth="false">
-               <image>
-                  <Image url="@Teste.png" />
-               </image>
-               <rotationAxis>
-                  <Point3D />
-               </rotationAxis>
-               <viewport>
-                  <Rectangle2D />
-               </viewport>
-            </ImageView>
-         </children></Pane>
-      <JFXButton buttonType="RAISED" layoutX="297.0" layoutY="108.0" style="-jfx-button-type: RAISED;" />
-    </children>
+<AnchorPane prefHeight="275.0" prefWidth="440.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project01.PrincipalController">
+   <children>
+      <ImageView fitHeight="292.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Linha.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="Nfuncionario" layoutX="139.0" layoutY="98.0" />
+      <Label layoutX="301.0" layoutY="102.0" text="Nome do Funcionário" />
+      <Label layoutX="302.0" layoutY="144.0" text="Número do Computador" />
+      <TextField fx:id="Ncomputador" layoutX="139.0" layoutY="140.0" />
+      <Label alignment="CENTER" layoutX="104.0" layoutY="21.0" prefHeight="17.0" prefWidth="336.0" text="CADASTRO DE ORDEM DE SERVIÇO">
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="Cadastrar" buttonType="RAISED" layoutX="220.0" layoutY="191.0" onAction="#ButtonCadastrarAction" prefHeight="40.0" prefWidth="88.0" style="-fx-background-color: #FFFFFF;" text="CADASTRAR" />
+      <Label fx:id="Resultado" alignment="CENTER" layoutX="104.0" layoutY="250.0" prefHeight="17.0" prefWidth="336.0" />
+   </children>
 </AnchorPane>
